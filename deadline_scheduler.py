@@ -35,22 +35,26 @@ def schedule_jobs(n, H, unavailable, jobs):
 
 
 # Test input
-n = 5
-H = 5
-unavailable = [3]
 
-jobs = [
-    (101, 2, 100),
-    (102, 1, 50),
-    (103, 3, 80),
-    (104, 2, 120),
-    (105, 4, 60)
-]
+if __name__ == "__main__":
 
-profit, schedule, rejected = schedule_jobs(
-    n, H, unavailable, jobs
-)
+    # Test input
+    n = 5
+    H = 5
+    unavailable = [3]
 
-print("BASE_PROFIT", profit)
-print("BASE_SLOTS", *schedule)
-print("REJECTED", *rejected)
+    jobs = [
+        (101, 2, 100),
+        (102, 1, 50),
+        (103, 3, 80),
+        (104, 2, 120),
+        (105, 4, 60)
+    ]
+
+    profit, schedule, rejected = schedule_jobs(
+        n, H, unavailable, jobs
+    )
+
+    print("BASE_PROFIT", profit)
+    print("BASE_SLOTS", *schedule)
+    print("REJECTED", *rejected)
