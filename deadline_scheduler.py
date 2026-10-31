@@ -30,9 +30,9 @@ def schedule_jobs(n, H, unavailable, jobs):
             rejected.append(job_id)
 
     rejected.sort()
-
-    return total_profit, slots[1:], rejected
-
+    
+    schedule = [0 if job == -1 else job for job in slots[1:]]
+    return total_profit, schedule, rejected
 
 # Test input
 
